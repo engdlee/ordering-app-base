@@ -9,7 +9,7 @@ const FoodCard = ({ food }: { food: IProduct }) => {
         <Image src={food.img} alt="" width="500" height="500" />
       </Link>
       <h1 className="text-3xl md:text-lg font-bold text-red-500 my-4">
-        {food.name}
+        {food.title}
       </h1>
       <span className="text-2xl md:text-lg font-bold mb-4">
         ${food.prices[0]}

@@ -1,27 +1,27 @@
-# Next.js + Tailwind CSS Example
+# Ordering App Base
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.2)](https://tailwindcss.com/blog/tailwindcss-v3-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+This project was created watching these 2 videos:
 
-## Deploy your own
+- [FE Video](https://www.youtube.com/watch?v=Z-hACIsjv4E)
+- [BE Video](https://www.youtube.com/watch?v=vIxGDq1SPZQ)
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+But with Typescript and no paypal integration.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+## To run it:
 
-## How to use
+- Copy `.env.example` and rename to `.env`
+- Create an atlas account (check instructions [here](https://github.com/engdlee/social-media-app-base))
+- Create a cloudinary account
+- Create an `unsigned` `upload preset` in cloudinary
+- Add the `NEXT_PUBLIC_UPLOAD_PRESET` to the `.env` file
+- Add the `MONGODB_URI` to the `.env` file
+- Add the `NEXT_PUBLIC_CLOUD_NAME` to the `.env` file
+- `ADMIN_USERNAME`, `ADMIN_PASSWORD` and `TOKEN` can be whatever you want
+- Run `npm i`
+- Run `npm run dev`
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+## To use it:
 
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-```
-
-```bash
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-```
-
-```bash
-pnpm create next-app --example with-tailwindcss with-tailwindcss-app
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+- Go to `/admin` to `login` and see the current food created and the current orders
+- To add more food go to the `homepage` after loggedin
+- It can be used to sell any food, the example is for pizza
