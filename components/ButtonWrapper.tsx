@@ -1,27 +1,27 @@
-import { PayPalButtons, usePayPalScriptReducer } from "@paypal/react-paypal-js";
-import cart from "pages/cart";
-import { useEffect } from "react";
-import style from "styled-jsx/style";
+import { PayPalButtons, usePayPalScriptReducer } from '@paypal/react-paypal-js';
+import cart from 'pages/cart';
+import { useEffect } from 'react';
+import style from 'styled-jsx/style';
 
 // Custom component to wrap the PayPalButtons and handle currency changes
-const ButtonWrapper = ({ currency, showSpinner }) => {
+const ButtonWrapper = () => {
   // usePayPalScriptReducer can be use only inside children of PayPalScriptProviders
   // This is the main reason to wrap the PayPalButtons in a new component
-  const [{ options, isPending }, dispatch] = usePayPalScriptReducer();
+  // const [{ options, isPending }, dispatch] = usePayPalScriptReducer();
 
-  useEffect(() => {
-    dispatch({
-      type: 'resetOptions',
-      value: {
-        ...options,
-        currency: currency,
-      },
-    });
-  }, [currency, showSpinner]);
+  // useEffect(() => {
+  //   dispatch({
+  //     type: 'resetOptions',
+  //     value: {
+  //       ...options,
+  //       currency: currency,
+  //     },
+  //   });
+  // }, [currency, showSpinner]);
 
   return (
     <>
-      {showSpinner && isPending && <div className="spinner" />}
+      {/* {showSpinner && isPending && <div className="spinner" />}
       <PayPalButtons
         style={style}
         disabled={false}
@@ -55,7 +55,7 @@ const ButtonWrapper = ({ currency, showSpinner }) => {
             });
           });
         }}
-      />
+      /> */}
     </>
   );
 };
