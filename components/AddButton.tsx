@@ -1,7 +1,7 @@
 import { Dispatch, SetStateAction } from 'react';
 
 type Props = {
-  setClose: Dispatch<SetStateAction<Boolean>>;
+  setClose: Dispatch<SetStateAction<boolean>>;
 };
 
 const AddButton = ({ setClose }: Props) => {

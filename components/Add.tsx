@@ -9,7 +9,7 @@ import axios from 'axios';
 import { IExtraOption } from '@interfaces/IExtraOption';
 
 type Props = {
-  setClose: Dispatch<SetStateAction<Boolean>>;
+  setClose: Dispatch<SetStateAction<boolean>>;
 };
 
 const Add = ({ setClose }: Props) => {
@@ -18,7 +18,7 @@ const Add = ({ setClose }: Props) => {
   const [desc, setDesc] = useState<string | null>(null);
   const [prices, setPrices] = useState<number[]>([]);
   const [extraOptions, setExtraOptions] = useState<IExtraOption[]>([]);
-  const [extra, setExtra] = useState<{} | null>(null);
+  const [extra, setExtra] = useState<object | null>(null);
 
   const changePrice = (e: ChangeEvent<HTMLInputElement>, index: number) => {
     const currentPrices = prices;

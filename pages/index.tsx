@@ -31,7 +31,7 @@ export const getServerSideProps = async (ctx: IContext) => {
 };
 
 const Home: NextPage<{ foodList: IProduct[]; admin: boolean }> = (props) => {
-  const [close, setClose] = useState<Boolean>(true);
+  const [close, setClose] = useState<boolean>(true);
   const { foodList, admin } = props;
 
   return (

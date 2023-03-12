@@ -4,8 +4,8 @@ import { IProduct } from '@interfaces/IProduct';
 const FoodList = ({ foodList }: { foodList: IProduct[] }) => {
   return (
     <div className="flex flex-col items-center px-3 py-5">
-      <h1 className="text-4xl font-semibold">THE BEST PIZZA IN TOWN</h1>
-      <p className="text-2xl">
+      <h1 className="text-4xl font-semibold mb-4">THE BEST PIZZA IN TOWN</h1>
+      <p className="text-2xl mb-4">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut blandit arcu
         in pretium molestie. Interdum et malesuada fames acme. Lorem ipsum dolor
         sit amet, consectetur adipiscing elit.
