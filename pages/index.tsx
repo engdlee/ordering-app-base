@@ -32,7 +32,7 @@ export const getServerSideProps = async (ctx: IContext) => {
 
 const Home: NextPage<{ foodList: IProduct[]; admin: boolean }> = (props) => {
   const [close, setClose] = useState<Boolean>(true);
-  const { foodList } = props;
+  const { foodList, admin } = props;
 
   return (
     <>
@@ -43,7 +43,7 @@ const Home: NextPage<{ foodList: IProduct[]; admin: boolean }> = (props) => {
       </div>
       <div className="">
         <div className="max-w-screen-2xl mx-auto flex min-h-screen flex-col items-center justify-start py-2">
-          {<AddButton setClose={setClose} />}
+          {admin && <AddButton setClose={setClose} />}
           <FoodList foodList={foodList} />
           {!close && <Add setClose={setClose} />}
         </div>

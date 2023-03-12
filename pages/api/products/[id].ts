@@ -28,7 +28,7 @@ export default async function handler(
   }
 
   if (method === 'PUT') {
-    if (!token || token !== process.env.token) {
+    if (!token || token !== process.env.TOKEN) {
       return res.status(401).json('Not authenticated!');
     }
     try {
@@ -42,7 +42,7 @@ export default async function handler(
   }
 
   if (method === 'DELETE') {
-    if (!token || token !== process.env.token) {
+    if (!token || token !== process.env.TOKEN) {
       return res.status(401).json('Not authenticated!');
     }
     try {

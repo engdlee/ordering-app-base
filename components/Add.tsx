@@ -44,10 +44,10 @@ const Add = ({ setClose }: Props) => {
     if (file !== null) {
       data.append('file', file);
     }
-    data.append('upload_preset', 'uploads');
+    data.append('upload_preset', `${process.env.NEXT_PUBLIC_UPLOAD_PRESET}`);
     try {
       const uploadRes = await axios.post(
-        'https://api.cloudinary.com/v1_1/dsbyq4sj1/image/upload',
+        `https://api.cloudinary.com/v1_1/${process.env.NEXT_PUBLIC_CLOUD_NAME}/image/upload`,
         data
       );
 
