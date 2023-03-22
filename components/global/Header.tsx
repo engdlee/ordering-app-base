@@ -8,9 +8,6 @@ const Header = () => {
     (state: { cart: IState }) => state.cart.quantity
   );
 
-  const styles = {
-    item: 'flex flex-1 items-center',
-  };
   return (
     <header className="h-28 px-12 py-5 bg-red-500 sticky top-0 z-20">
       <div className="max-w-screen-2xl flex items-center justify-between mx-auto my-2">

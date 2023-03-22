@@ -60,7 +60,10 @@ const Add = ({ setClose }: Props) => {
         img: url,
       };
 
-      await axios.post('http://localhost:3000/api/products', newProduct);
+      await axios.post(
+        `${process.env.NEXT_PUBLIC_URL}/api/products`,
+        newProduct
+      );
       setClose(true);
     } catch (err) {
       console.log(err);

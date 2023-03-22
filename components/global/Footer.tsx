@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="flex flex-col flex-1 relative p-12 justify-center md:flex-row">
           <div className="flex-1 px-5">
             <h2 className="text-3xl text-gray-300 my-5">
-              OH YES, WE DID.THE LAMA PIZZA, WELL BAKED SLICE OF PIZZA.
+              OH YES, WE DID.THE BEST PIZZA, WELL BAKED SLICE OF PIZZA.
             </h2>
           </div>
           <div className="flex-1 px-5">
