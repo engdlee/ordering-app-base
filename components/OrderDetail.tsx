@@ -8,7 +8,6 @@ const OrderDetail = ({
   total: number;
   createOrder: (data: IOrder) => Promise<void>;
 }) => {
-  console.log('comp', createOrder);
   const [customer, setCustomer] = useState('');
   const [address, setAddress] = useState('');
 

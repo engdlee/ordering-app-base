@@ -17,11 +17,8 @@ const Index = ({
   const status = ['preparing', 'on the way', 'delivered'];
 
   const handleDelete = async (id?: string) => {
-    console.log(id);
     try {
-      const res = await axios.delete(
-        `${process.env.NEXT_PUBLIC_URL}/api/products/${id}`
-      );
+      await axios.delete(`${process.env.NEXT_PUBLIC_URL}/api/products/${id}`);
       if (id) {
         setPizzaList(pizzaList.filter((pizza) => pizza._id !== id));
       }

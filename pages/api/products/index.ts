@@ -19,6 +19,7 @@ export default async function handler(
     try {
       const products = await Product.find();
       res.status(200).json(products);
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (err: any) {
       res.status(500).json(err);
     }
@@ -31,6 +32,7 @@ export default async function handler(
     try {
       const product = await Product.create(req.body);
       res.status(201).json(product);
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (err: any) {
       res.status(500).json(err);
     }

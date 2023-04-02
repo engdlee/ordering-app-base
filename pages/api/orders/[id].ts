@@ -17,6 +17,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
     try {
       const order = await Order.findById(id);
       res.status(200).json(order);
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (err: any) {
       res.status(500).json(err);
     }
@@ -27,6 +28,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
         new: true,
       });
       res.status(200).json(order);
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (err: any) {
       res.status(500).json(err);
     }

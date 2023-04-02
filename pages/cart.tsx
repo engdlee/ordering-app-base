@@ -1,11 +1,6 @@
 import Image from 'next/image';
 import { useDispatch, useSelector } from 'react-redux';
-import { useEffect, useState } from 'react';
-import {
-  PayPalScriptProvider,
-  PayPalButtons,
-  usePayPalScriptReducer,
-} from '@paypal/react-paypal-js';
+import { useState } from 'react';
 import axios from 'axios';
 import { useRouter } from 'next/router';
 import { reset } from '../redux/cartSlice';
@@ -18,14 +13,10 @@ const Cart = () => {
   const cart = useSelector((state: { cart: ICart }) => state.cart);
   const [open, setOpen] = useState(false);
   const [cash, setCash] = useState(false);
-  const amount = cart.total;
-  const currency = 'USD';
-  // const style = { layout: 'vertical' };
   const dispatch = useDispatch();
   const router = useRouter();
 
   const createOrder = async (data: IOrder) => {
-    console.log(data);
     try {
       const res = await axios.post(
         `${process.env.NEXT_PUBLIC_URL}/api/orders`,

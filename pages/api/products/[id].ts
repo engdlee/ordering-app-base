@@ -22,6 +22,7 @@ export default async function handler(
     try {
       const product = await Product.findById(id);
       res.status(200).json(product);
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (err: any) {
       res.status(500).json(err);
     }
@@ -36,6 +37,7 @@ export default async function handler(
         new: true,
       });
       res.status(200).json(product);
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (err: any) {
       res.status(500).json(err);
     }
@@ -48,6 +50,7 @@ export default async function handler(
     try {
       await Product.findByIdAndDelete(id);
       res.status(200).json('The product has been deleted!');
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (err: any) {
       res.status(500).json(err);
     }

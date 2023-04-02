@@ -1,10 +1,4 @@
-import {
-  useState,
-  Dispatch,
-  SetStateAction,
-  ChangeEvent,
-  MouseEvent,
-} from 'react';
+import { useState, Dispatch, SetStateAction, ChangeEvent } from 'react';
 import axios from 'axios';
 import { IExtraOption } from '@interfaces/IExtraOption';
 
@@ -35,7 +29,6 @@ const Add = ({ setClose }: Props) => {
   };
 
   const handleExtra = () => {
-    console.log(extraOptions);
     setExtraOptions((prev) => [...prev, extra as IExtraOption]);
   };
 
