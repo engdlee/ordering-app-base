@@ -69,7 +69,7 @@ const Index = ({
                     src={product.img}
                     width={50}
                     height={50}
-                    objectFit="cover"
+                    style={{ objectFit: 'cover' }}
                     alt=""
                   />
                 </td>

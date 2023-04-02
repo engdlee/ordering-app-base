@@ -90,15 +90,18 @@ const Add = ({ setClose }: Props) => {
             className="border-b border-b-gray-400 outline-none"
             type="text"
             onChange={(e) => setTitle(e.target.value)}
+            required
           />
         </div>
         <div className="flex flex-col mb-3">
           <label className="mb-1 text-sm font-medium">Desc</label>
           <textarea
+            maxLength={120}
             className="border border-gray-400 outline-none"
             rows={4}
             onChange={(e) => setDesc(e.target.value)}
           />
+          <div className="font-semibold text-right">{desc?.length}/120</div>
         </div>
         <div className="flex flex-col mb-3">
           <label className="mb-1 text-sm font-medium">Prices</label>
